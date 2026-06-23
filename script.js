@@ -158,6 +158,9 @@
      5. Sliders (escritório, depoimentos)
      -------------------------------------------------------- */
   function setupSlider(slider) {
+    if (slider.classList.contains("slider--initialized")) return;
+    slider.classList.add("slider--initialized");
+
     var track = slider.querySelector(".slider__track");
     var slides = slider.querySelectorAll(".slider__slide");
     var prev = slider.querySelector(".slider__arrow--prev");
@@ -209,18 +212,21 @@
       });
 
     function startAutoplay() {
+      if (autoplayId) window.clearInterval(autoplayId);
       autoplayId = window.setInterval(function () {
         goTo(index + 1);
       }, 5000);
     }
 
     function restartAutoplay() {
-      if (autoplayId) window.clearInterval(autoplayId);
       startAutoplay();
     }
 
     slider.addEventListener("mouseenter", function () {
-      if (autoplayId) window.clearInterval(autoplayId);
+      if (autoplayId) {
+        window.clearInterval(autoplayId);
+        autoplayId = null;
+      }
     });
     slider.addEventListener("mouseleave", startAutoplay);
 
