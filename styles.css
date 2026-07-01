@@ -120,7 +120,7 @@ html {
 .button--whatsapp {
   background-color: #1f8a4c;
   color: var(--white);
-  margin-top: 1.5rem;
+
   box-shadow: var(--shadow-soft);
 }
 
