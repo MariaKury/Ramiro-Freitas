@@ -158,6 +158,10 @@ html {
   border-bottom: 1px solid var(--line);
 }
 
+.header__brand-logo {
+  height: 80px;
+}
+
 .header__inner {
   max-width: var(--max);
   margin: 0 auto;
