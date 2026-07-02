@@ -395,9 +395,9 @@ html {
 .hero__image {
   position: absolute;
   inset: 0;
-  background-image: url("images/rec1.png");
+  background-image: url("images/rec.png");
   background-size: cover;
-  background-position: top center;
+  background-position: center;
 }
 
 .hero__image::after {
@@ -1655,6 +1655,10 @@ html {
 
   .office__content {
     order: -1;
+  }
+
+  .lawyer__figure {
+    order: 1;
   }
 
   .testimonials {
