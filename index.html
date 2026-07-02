@@ -54,7 +54,9 @@
         <nav class="nav" id="nav-principal" aria-label="Navegação principal">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#humanizada">Sobre Nós</a>
+              <a class="nav__link" href="#humanizada"
+                >Atendimento personalizado</a
+              >
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#atuacao">Atuação</a>
@@ -137,7 +139,7 @@
                   />
                 </svg>
               </div>
-              <h3 class="nav-card__title">Sobre Nós</h3>
+              <h3 class="nav-card__title">Atendimento personalizado</h3>
               <p class="nav-card__desc">
                 Conheça nossa missão, visão e valores humanizados.
               </p>
@@ -219,7 +221,7 @@
       <section class="section" id="humanizada">
         <div class="section__inner">
           <header class="section__header">
-            <h2 class="section__eyebrow">Sobre Nós</h2>
+            <h2 class="section__eyebrow">Atendimento personalizado</h2>
           </header>
 
           <div class="humanizada__content">
@@ -257,11 +259,79 @@
               </p>
             </div>
 
-            <img
-              class="humanizada__image"
-              src="images/mission.png"
-              alt="Advogada Rosilda Freitas em atendimento a cliente"
-            />
+            <div
+              class="slider humanizada__slider"
+              id="humanizada-slider"
+              aria-roledescription="carrossel"
+              aria-label="Fotos do atendimento personalizado"
+            >
+              <div class="slider__viewport">
+                <ul class="slider__track">
+                  <li class="slider__slide" role="group" aria-label="1 de 3">
+                    <div
+                      class="slider__image slider__image--humanizada-1"
+                      role="img"
+                      aria-label="Advogada Rosilda Freitas em atendimento a cliente"
+                    ></div>
+                  </li>
+                  <li class="slider__slide" role="group" aria-label="2 de 3">
+                    <div
+                      class="slider__image slider__image--humanizada-2"
+                      role="img"
+                      aria-label="Placeholder para nova foto de atendimento"
+                    ></div>
+                  </li>
+                  <li class="slider__slide" role="group" aria-label="3 de 3">
+                    <div
+                      class="slider__image slider__image--humanizada-3"
+                      role="img"
+                      aria-label="Placeholder para nova foto do escritório"
+                    ></div>
+                  </li>
+                </ul>
+              </div>
+
+              <button
+                class="slider__arrow slider__arrow--prev"
+                type="button"
+                aria-label="Foto anterior"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="slider__arrow slider__arrow--next"
+                type="button"
+                aria-label="Próxima foto"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="slider__dots"
+                role="tablist"
+                aria-label="Selecionar foto"
+              ></div>
+            </div>
 
             <div class="humanizada__details">
               <div class="humanizada__details-left">
@@ -333,6 +403,11 @@
         <div class="section__inner">
           <header class="section__header">
             <p class="section__eyebrow">Áreas de Atuação</p>
+            <p class="section__lead">
+              Cada caso é único e merece uma estratégia jurídica personalizada.
+              Conheça as áreas de atuação do Ramiro &amp; Souza Advocacia e
+              descubra como podemos ajudar a proteger os seus direitos.
+            </p>
           </header>
 
           <div class="services-tabs" data-tabs>
@@ -381,12 +456,48 @@
                 type="button"
                 role="tab"
                 aria-selected="false"
+                aria-controls="tab-criminal-empresarial"
+                id="tab-btn-criminal-empresarial"
+                data-tab-target="tab-criminal-empresarial"
+                tabindex="-1"
+              >
+                Criminal Empresarial
+              </button>
+              <button
+                class="services-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
                 aria-controls="tab-familia"
                 id="tab-btn-familia"
                 data-tab-target="tab-familia"
                 tabindex="-1"
               >
-                Direito de Família
+                Família e Sucessões
+              </button>
+              <button
+                class="services-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tab-civel"
+                id="tab-btn-civel"
+                data-tab-target="tab-civel"
+                tabindex="-1"
+              >
+                Direito Cível
+              </button>
+              <button
+                class="services-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tab-penal-militar"
+                id="tab-btn-penal-militar"
+                data-tab-target="tab-penal-militar"
+                tabindex="-1"
+              >
+                Direito Penal Militar
               </button>
               <button
                 class="services-tab"
@@ -400,6 +511,18 @@
               >
                 Direito do Consumidor
               </button>
+              <button
+                class="services-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tab-administrativo"
+                id="tab-btn-administrativo"
+                data-tab-target="tab-administrativo"
+                tabindex="-1"
+              >
+                Direito Administrativo
+              </button>
             </div>
 
             <article
@@ -410,9 +533,12 @@
             >
               <h3 class="services__name">Direito do Trabalho</h3>
               <p class="services__desc">
-                Atuamos na defesa dos direitos de trabalhadores e empregadores,
-                oferecendo orientação jurídica e representação em processos
-                judiciais e administrativos.
+                Contamos com advogado trabalhista dedicado a assessorar
+                trabalhadores e empregadores, oferecendo soluções preventivas e
+                atuação estratégica em demandas judiciais e administrativas.
+                Nosso objetivo é assegurar o cumprimento da legislação
+                trabalhista e a efetiva proteção dos direitos de nossos
+                clientes.
               </p>
               <ul class="services-points">
                 <li class="services-points__item">Verbas rescisórias</li>
@@ -423,7 +549,9 @@
                 <li class="services-points__item">
                   Reconhecimento de vínculo empregatício
                 </li>
-                <li class="services-points__item">Assédio moral e sexual</li>
+                <li class="services-points__item">
+                  Assédio moral e assédio sexual no trabalho
+                </li>
                 <li class="services-points__item">Acidente de trabalho</li>
                 <li class="services-points__item">
                   Estabilidade gestante e acidentária
@@ -446,9 +574,11 @@
             >
               <h3 class="services__name">Direito Previdenciário</h3>
               <p class="services__desc">
-                Prestamos assessoria para garantir o acesso dos segurados aos
-                benefícios previdenciários e assistenciais, atuando perante o
-                INSS e o Poder Judiciário.
+                Nossa equipe reúne advogado previdenciário especializado em
+                orientar segurados do INSS e beneficiários da Previdência
+                Social, buscando garantir o acesso pleno aos benefícios
+                previdenciários e assistenciais, tanto na esfera administrativa
+                quanto judicial.
               </p>
               <ul class="services-points">
                 <li class="services-points__item">Aposentadorias</li>
@@ -485,8 +615,11 @@
             >
               <h3 class="services__name">Direito Criminal</h3>
               <p class="services__desc">
-                Atuação especializada na defesa dos direitos e garantias
-                fundamentais dos cidadãos em todas as fases da persecução penal.
+                O escritório dispõe de advogado criminalista atuante na defesa
+                técnica de pessoas investigadas ou processadas criminalmente,
+                assegurando a proteção dos direitos e garantias fundamentais em
+                todas as fases da persecução penal, com atuação ética,
+                estratégica e comprometida.
               </p>
               <ul class="services-points">
                 <li class="services-points__item">
@@ -496,7 +629,9 @@
                 <li class="services-points__item">Audiência de custódia</li>
                 <li class="services-points__item">Defesa em ações penais</li>
                 <li class="services-points__item">Crimes contra a pessoa</li>
-                <li class="services-points__item">Crimes patrimoniais</li>
+                <li class="services-points__item">
+                  Crimes contra o patrimônio
+                </li>
                 <li class="services-points__item">Crimes de trânsito</li>
                 <li class="services-points__item">
                   Crimes previstos na Lei de Drogas
@@ -509,16 +644,67 @@
 
             <article
               class="services-panel"
+              id="tab-criminal-empresarial"
+              role="tabpanel"
+              aria-labelledby="tab-btn-criminal-empresarial"
+              hidden
+            >
+              <h3 class="services__name">Direito Criminal Empresarial</h3>
+              <p class="services__desc">
+                Para questões que envolvem a atividade empresarial, oferecemos
+                advogado criminal empresarial preparado para defender
+                empresários, sócios, administradores e pessoas jurídicas, com
+                atuação estratégica desde a fase investigativa — em inquéritos
+                policiais e procedimentos fiscalizatórios — até os tribunais
+                superiores. É a nossa frente especializada em crimes
+                empresariais e crime tributário, pensada para proteger o
+                patrimônio, a reputação e a liberdade de quem empreende.
+              </p>
+              <ul class="services-points">
+                <li class="services-points__item">
+                  Crimes contra a ordem tributária e sonegação fiscal
+                </li>
+                <li class="services-points__item">
+                  Crimes contra o sistema financeiro nacional
+                </li>
+                <li class="services-points__item">Lavagem de dinheiro</li>
+                <li class="services-points__item">
+                  Estelionato e fraudes empresariais
+                </li>
+                <li class="services-points__item">Apropriação indébita</li>
+                <li class="services-points__item">Crimes falimentares</li>
+                <li class="services-points__item">
+                  Corrupção e crimes contra a administração pública
+                </li>
+                <li class="services-points__item">
+                  Compliance criminal e prevenção de riscos empresariais
+                </li>
+                <li class="services-points__item">
+                  Defesa em buscas e apreensões e operações policiais
+                </li>
+                <li class="services-points__item">
+                  Crimes ambientais empresariais
+                </li>
+                <li class="services-points__item">
+                  Crimes contra as relações de consumo
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="services-panel"
               id="tab-familia"
               role="tabpanel"
               aria-labelledby="tab-btn-familia"
               hidden
             >
-              <h3 class="services__name">Direito de Família</h3>
+              <h3 class="services__name">Direito de Família e Sucessões</h3>
               <p class="services__desc">
-                Atuamos com sensibilidade, responsabilidade e discrição em
-                questões familiares, buscando soluções seguras para conflitos
-                que envolvem relações pessoais e patrimoniais.
+                Na área familiar, você encontra advogado de família atento à
+                sensibilidade, à responsabilidade e à discrição que a solução de
+                conflitos familiares e sucessórios exige, priorizando a
+                preservação dos vínculos sempre que possível e a proteção dos
+                direitos patrimoniais e pessoais envolvidos.
               </p>
               <ul class="services-points">
                 <li class="services-points__item">
@@ -538,8 +724,91 @@
                 <li class="services-points__item">
                   Reconhecimento e dissolução de união estável
                 </li>
-                <li class="services-points__item">Inventário e partilha</li>
+                <li class="services-points__item">
+                  Inventário judicial e extrajudicial
+                </li>
+                <li class="services-points__item">Partilha de bens</li>
+                <li class="services-points__item">
+                  Investigação e reconhecimento de paternidade
+                </li>
+                <li class="services-points__item">Planejamento sucessório</li>
                 <li class="services-points__item">Interdição e curatela</li>
+              </ul>
+            </article>
+
+            <article
+              class="services-panel"
+              id="tab-civel"
+              role="tabpanel"
+              aria-labelledby="tab-btn-civel"
+              hidden
+            >
+              <h3 class="services__name">Direito Cível</h3>
+              <p class="services__desc">
+                Disponibilizamos advogado cível capacitado para atuar na defesa
+                de pessoas físicas e jurídicas em questões cíveis, elaborando
+                contratos, negociando acordos e conduzindo ações judiciais com
+                foco na solução mais rápida e segura para cada caso.
+              </p>
+              <ul class="services-points">
+                <li class="services-points__item">
+                  Elaboração e revisão de contratos
+                </li>
+                <li class="services-points__item">
+                  Cobrança de dívidas e execução de títulos
+                </li>
+                <li class="services-points__item">
+                  Ações de indenização por danos morais e materiais
+                </li>
+                <li class="services-points__item">Responsabilidade civil</li>
+                <li class="services-points__item">
+                  Ações possessórias e questões imobiliárias
+                </li>
+                <li class="services-points__item">
+                  Despejo e locação de imóveis
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="services-panel"
+              id="tab-penal-militar"
+              role="tabpanel"
+              aria-labelledby="tab-btn-penal-militar"
+              hidden
+            >
+              <h3 class="services__name">Direito Penal Militar</h3>
+              <p class="services__desc">
+                Militares estaduais e federais contam com advogado militar
+                experiente em procedimentos administrativos disciplinares e
+                processos perante a Justiça Militar, sempre observando as
+                particularidades da legislação militar.
+              </p>
+              <ul class="services-points">
+                <li class="services-points__item">
+                  Defesa em Inquérito Policial Militar (IPM)
+                </li>
+                <li class="services-points__item">
+                  Defesa em ações penais militares
+                </li>
+                <li class="services-points__item">
+                  Acompanhamento em flagrantes militares
+                </li>
+                <li class="services-points__item">
+                  Recursos perante a Justiça Militar
+                </li>
+                <li class="services-points__item">
+                  Defesa em crimes previstos no Código Penal Militar
+                </li>
+                <li class="services-points__item">
+                  Atuação em Conselhos de Disciplina e Conselhos de Justificação
+                </li>
+                <li class="services-points__item">
+                  Defesa em Processos Administrativos Disciplinares (PAD)
+                </li>
+                <li class="services-points__item">
+                  Consultoria jurídica para militares
+                </li>
               </ul>
             </article>
 
@@ -552,27 +821,66 @@
             >
               <h3 class="services__name">Direito do Consumidor</h3>
               <p class="services__desc">
-                Defesa dos direitos do consumidor em conflitos com empresas,
-                instituições financeiras e prestadores de serviços.
+                Consumidores que tiveram seus direitos violados podem contar com
+                advogado do consumidor pronto para buscar soluções eficazes
+                diante de práticas abusivas, com foco na reparação de danos e no
+                restabelecimento do equilíbrio nas relações de consumo.
+              </p>
+              <ul class="services-points">
+                <li class="services-points__item">Negativação indevida</li>
+                <li class="services-points__item">Cobranças abusivas</li>
+                <li class="services-points__item">Danos morais e materiais</li>
+                <li class="services-points__item">
+                  Problemas com bancos e instituições financeiras
+                </li>
+                <li class="services-points__item">
+                  Cancelamento e revisão de contratos
+                </li>
+                <li class="services-points__item">
+                  Falha na prestação de serviços
+                </li>
+                <li class="services-points__item">
+                  Compras online não entregues ou com defeito
+                </li>
+                <li class="services-points__item">
+                  Atraso e cancelamento de voos
+                </li>
+                <li class="services-points__item">
+                  Problemas com planos de saúde
+                </li>
+                <li class="services-points__item">
+                  Cláusulas contratuais abusivas
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="services-panel"
+              id="tab-administrativo"
+              role="tabpanel"
+              aria-labelledby="tab-btn-administrativo"
+              hidden
+            >
+              <h3 class="services__name">Direito Administrativo</h3>
+              <p class="services__desc">
+                Questões que envolvem a Administração Pública são conduzidas por
+                advogado administrativo com rigor técnico em procedimentos
+                administrativos e judiciais, assessorando pessoas físicas e
+                jurídicas.
               </p>
               <ul class="services-points">
                 <li class="services-points__item">
-                  Cobranças abusivas e negativação indevida
+                  Processos administrativos disciplinares
                 </li>
                 <li class="services-points__item">
-                  Atraso ou cancelamento de voo
+                  Licitações e contratos administrativos
                 </li>
                 <li class="services-points__item">
-                  Problemas com bancos e contratos financeiros
+                  Servidores públicos: direitos e prerrogativas
                 </li>
+                <li class="services-points__item">Mandado de segurança</li>
                 <li class="services-points__item">
-                  Falha na prestação de serviço
-                </li>
-                <li class="services-points__item">
-                  Vícios de produto e troca indevida
-                </li>
-                <li class="services-points__item">
-                  Indenização por danos morais e materiais
+                  Responsabilidade civil do Estado
                 </li>
               </ul>
             </article>
@@ -610,6 +918,11 @@
               acompanhar e coordenar o trabalho desenvolvido pela equipe nas
               demais áreas de atuação.
             </p>
+          </div>
+          <figure class="lawyer__figure" aria-hidden="true">
+            <div class="lawyer__photo"></div>
+          </figure>
+          <div class="lawyer__footer">
             <p class="lawyer__text">
               Ao longo de mais de cinco anos, o escritório conquistou a
               confiança de seus clientes por meio de um trabalho sério,
@@ -631,9 +944,6 @@
               Mais do que processos, defendemos pessoas, histórias e direitos.
             </p>
           </div>
-          <figure class="lawyer__figure" aria-hidden="true">
-            <div class="lawyer__photo"></div>
-          </figure>
         </div>
       </section>
 
