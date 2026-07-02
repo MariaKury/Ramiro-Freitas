@@ -279,10 +279,23 @@
   }
 
   /* --------------------------------------------------------
+     Logo — scroll até o topo absoluto
+     -------------------------------------------------------- */
+  function setupLogoScroll() {
+    var brand = document.querySelector(".header__brand");
+    if (!brand) return;
+    brand.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* --------------------------------------------------------
      Init
      -------------------------------------------------------- */
   document.addEventListener("DOMContentLoaded", function () {
     setupMobileMenu();
+    setupLogoScroll();
     setupWhatsappLinks();
     setupServiceTabs();
     setupContactForm();
