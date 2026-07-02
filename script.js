@@ -7,8 +7,8 @@
   "use strict";
 
   // Número de WhatsApp (formato internacional, somente dígitos).
-  // (31) 9181-7078  ->  +55 31 91817078
-  var WHATSAPP_NUMBER = "553191817078";
+  // (31) 98403-3661  ->  +55 31 984033661
+  var WHATSAPP_NUMBER = "5531984033661";
 
   /* --------------------------------------------------------
      1. Menu mobile (toggle)
