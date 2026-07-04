@@ -18,7 +18,7 @@
   --paper: #fbf9f5;
   --white: #ffffff;
   --ink: #2d3134;
-  --ink-cream: #615956;
+  --ink-cream: #5c544f;
   --ink-soft: #6a6066;
   --line: #e6ddd1;
   --shadow: 0 24px 60px rgba(70, 16, 26, 0.12);
@@ -162,8 +162,6 @@ html {
 
 .header__brand-logo {
   height: 80px;
-  transform: scale(1.5);
-  filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.4));
 }
 
 .header__inner {
