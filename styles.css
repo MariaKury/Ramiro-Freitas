@@ -18,6 +18,7 @@
   --paper: #fbf9f5;
   --white: #ffffff;
   --ink: #2d3134;
+  --ink-cream: #5d5551;
   --ink-soft: #6a6066;
   --line: #e6ddd1;
   --shadow: 0 24px 60px rgba(70, 16, 26, 0.12);
@@ -155,11 +156,13 @@ html {
   z-index: 50;
   background-color: rgba(251, 249, 245, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
+
+  background-color: var(--ink-cream);
 }
 
 .header__brand-logo {
   height: 80px;
+  transform: scale(1.5);
 }
 
 .header__inner {
@@ -242,6 +245,8 @@ html {
 .nav__link {
   text-decoration: none;
   color: var(--ink-soft);
+
+  color: var(--white);
   font-weight: 500;
   font-size: 0.95rem;
   padding: 0.3rem 0;
@@ -331,7 +336,7 @@ html {
   width: 5rem;
   height: 1.5px;
   margin-top: 0.85rem;
-  background-color: var(--gold);
+  background-color: var(--wine);
 }
 
 .hero__title-accent {
@@ -395,7 +400,7 @@ html {
 .hero__image {
   position: absolute;
   inset: 0;
-  background-image: url("images/rec.png");
+  background-image: url("images/rec1.png");
   background-size: cover;
   background-position: center;
 }
@@ -476,6 +481,7 @@ html {
    ============================================================ */
 .section-nav {
   background-color: var(--cream);
+
   padding: 1rem 0 3rem 0;
   display: none;
 }
@@ -492,7 +498,7 @@ html {
 .nav-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--ink);
+  background-color: var(--ink-cream);
   border-radius: 20px;
   min-height: 280px;
   text-decoration: none;
@@ -514,32 +520,32 @@ html {
   background-image: linear-gradient(
     to right,
     rgba(43, 35, 38, 0) 50%,
-    var(--ink) 100%
+    var(--ink-cream) 100%
   );
 }
 
 .nav-card--humanizada::before {
   background-image:
-    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink) 100%),
+    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink-cream) 100%),
     url("images/card1.png");
 }
 
 .nav-card--areas::before {
   background:
-    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink) 100%) center /
-      cover no-repeat,
+    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink-cream) 100%)
+      center / cover no-repeat,
     url("images/card2.png") top center / cover no-repeat;
 }
 
 .nav-card--historia::before {
   background-image:
-    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink) 100%),
+    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink-cream) 100%),
     url("images/card3.png");
 }
 
 .nav-card--chegar::before {
   background-image:
-    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink) 100%),
+    linear-gradient(to right, rgba(43, 35, 38, 0) 60%, var(--ink-cream) 100%),
     url("images/card4.png");
 }
 
@@ -592,7 +598,7 @@ html {
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  background-color: var(--ink);
+  background-color: var(--ink-cream);
 }
 
 .nav-card__icon {
@@ -1789,6 +1795,8 @@ html {
     grid-template-columns: 47% 53%;
     min-height: 150px;
     position: relative;
+
+    background-color: var(--ink-cream);
   }
 
   .nav-card__content {
@@ -1796,7 +1804,7 @@ html {
     grid-row: 1;
     z-index: 2;
     padding: 0.85rem 0.8rem;
-    background-color: var(--ink);
+    background-color: var(--ink-cream);
     min-width: 0;
   }
 
