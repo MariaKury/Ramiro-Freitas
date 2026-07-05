@@ -795,6 +795,9 @@ html {
 .humanizada__footer {
   order: 2;
 }
+.humanizada__footer i {
+  font-weight: 700;
+}
 
 .humanizada__details {
   order: 4;
