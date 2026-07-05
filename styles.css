@@ -917,6 +917,10 @@ html {
   .humanizada__subtitle {
     font-size: 1.15rem;
   }
+
+  .nav__link {
+    color: var(--vine);
+  }
 }
 
 /* ============================================================
